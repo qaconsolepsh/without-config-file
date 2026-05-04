@@ -1,0 +1,22 @@
+# Upsun configuration, generated using AI at: 2026-05-04T16:22:29.350Z
+# AI can make mistakes. Please modify this file to suit your needs.
+applications:
+  app:
+    type: nodejs:24
+    build:
+      flavor: none
+    hooks:
+      build: |
+        set -ex
+        # No dependencies or build steps detected, placeholder for future build commands
+      deploy: |
+        set -ex
+        # No deploy steps detected
+    web:
+      commands:
+        start: node index.js
+
+routes:
+  https://{default}/:
+    type: upstream
+    upstream: app:http
